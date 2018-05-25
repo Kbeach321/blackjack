@@ -14,8 +14,8 @@ class Deck:
         for value in range(1, 5):
             for cardamount in range(1, 11):
                 self.cards.append(Card(cardamount))
-            for facecard in facecards:
-                self.cards.append(Card(facecard))
+            for facevalues in facecardvalue:
+                self.cards.append(Card(facevalues))
         random.shuffle(self.cards)
 
     def draw(self):
@@ -51,28 +51,35 @@ class Player:
         return self.hand_value() == other.hand_value()
 
 ################## Variables ########################
-facecards = {"K:10", "Q:10", "J:10", "A:11"}
+facecards = {"K":10, "Q":10, "J":10, "A":11}
 facecardvalue = facecards.values()
 
 
 ##########################DEBUG####################################
 deck = Deck()
-print(deck)
-print(facecardvalue)
+print(f"{deck}")
+# print(f"DEBUG: {facecardvalue}")
 
 ################## Game ##########################
 while True:
+######################PLAYER 1 RULES##################
     player_1 = Player()
     player_1.handfromdeck(deck)
     print(f"Player One: {player_1.hand_value()}")
     hit = input("Would you like to hit? Y/N ")
-#    if hit == "Y":
-#        self.hand.append(card)
+    if hit == "Y":
+        player_1.hand.append.addcard()
+        print(f"Player One New Total: {player_1.hand_value()}")
 
+    input()
 
+######################PLAYER 1 RULES##################
     player_2 = Player()
     player_2.handfromdeck(deck)
     print(f"Player Two: {player_2.hand_value()}")
     hit = input("Would you like to hit? Y/N ")
-#    if hit == "Y":
-#        self.hand.append(card)
+    if hit == "Y":
+        player_2.hand.append(Card)
+        print(f"Player One New Total: {player_1.hand_value()}")
+
+    input()
