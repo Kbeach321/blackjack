@@ -51,27 +51,28 @@ class Player:
         return self.hand_value() == other.hand_value()
 
 ################## Variables ########################
-A = 11  #or 1 if hand_value() > 21
-K = 10
-Q = 10
-J = 10
-facecards = [K , Q , J, A]
+facecards = {"K:10", "Q:10", "J:10", "A:11"}
+facecardvalue = facecards.values()
+
 
 ##########################DEBUG####################################
 deck = Deck()
 print(deck)
+print(facecardvalue)
 
 ################## Game ##########################
 while True:
-    input()
     player_1 = Player()
     player_1.handfromdeck(deck)
     print(f"Player One: {player_1.hand_value()}")
-    input("Would you like to hit? Y/N ")
+    hit = input("Would you like to hit? Y/N ")
+#    if hit == "Y":
+#        self.hand.append(card)
 
-    input()
 
     player_2 = Player()
     player_2.handfromdeck(deck)
     print(f"Player Two: {player_2.hand_value()}")
-    input("Would you like to hit? Y/N ")
+    hit = input("Would you like to hit? Y/N ")
+#    if hit == "Y":
+#        self.hand.append(card)
