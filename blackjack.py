@@ -57,29 +57,35 @@ facecardvalue = facecards.values()
 
 ##########################DEBUG####################################
 deck = Deck()
-print(f"{deck}")
-# print(f"DEBUG: {facecardvalue}")
+#print(f"{deck}")
 
 ################## Game ##########################
 while True:
 ######################PLAYER 1 RULES##################
     player_1 = Player()
     player_1.handfromdeck(deck)
-    print(f"Player One: {player_1.hand_value()}")
+    print(f"Player One: {player_1.hand_value()}")    # Print the List to see cards #
     hit = input("Would you like to hit? Y/N ")
-    if hit == "Y":
-        player_1.hand.append.addcard()
+    if hit == "y":
+        player_1.addcard(deck.draw())
         print(f"Player One New Total: {player_1.hand_value()}")
-
+    hit2 = input("Would you like to hit? Y/N ")
+    if hit2 == "y":
+        player_1.addcard(deck.draw())
+        print(f"Player One New Total: {player_1.hand_value()}")
     input()
 
 ######################PLAYER 1 RULES##################
     player_2 = Player()
     player_2.handfromdeck(deck)
-    print(f"Player Two: {player_2.hand_value()}")
+    print(f"Player Two: {player_2.hand_value()}")   # Print the List to see cards #
     hit = input("Would you like to hit? Y/N ")
-    if hit == "Y":
-        player_2.hand.append(Card)
-        print(f"Player One New Total: {player_1.hand_value()}")
+    if hit == "y":
+        player_2.addcard(deck.draw())
+        print(f"Player Two New Total: {player_2.hand_value()}")
+    hit2 = input("Would you like to hit? Y/N ")
+    if hit2 == "y":
+        player_2.addcard(deck.draw())
+        print(f"Player Two New Total: {player_2.hand_value()}")
 
     input()
